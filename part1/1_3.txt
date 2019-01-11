@@ -1,0 +1,19 @@
+sudo docker pull ubuntu:16.04
+sudo docker run -d --rm -it --name dokkis ubuntu:16.04 sh -c 'read website; sleep 3; curl http://$website;'
+sudo docker exec -it dokkis bash
+apt-get update
+apt-get install curl
+
+Then inside another terminal:
+sudo docker attach dokkis
+helsinki.fi
+
+After this following was printed:
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+

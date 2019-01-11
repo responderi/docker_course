@@ -1,0 +1,10 @@
+sudo docker stop $(sudo docker ps -a -q)
+sudo docker rm $(sudo docker ps -a -q)
+sudo docker system prune -a
+
+sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
